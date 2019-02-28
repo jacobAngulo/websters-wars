@@ -1,8 +1,18 @@
 import React from 'react'
 
-const WordOfTheDay = () => {
+const WordOfTheDay = (props) => {
     return (
-        <p>word of the day</p>
+        <div>
+            <p>{props.word}</p>
+            <ul>
+                {props.definitions.map((definition => {
+                    return (
+                        <li>{definition}</li>
+                    )
+                }))}
+            </ul>
+        </div>
+
     )
 }
 
